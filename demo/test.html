@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="./toolbar.css">
+</head>
+
+<body style="margin=0px">
+    <div style="margin:0 auto;width:1024px;">
+        <!-- <div id="canvas" style="margin:0 auto;height:100vh;border: 1px solid #000;"></div> -->
+        <div id="canvas" style="border: 3px solid;width:1024px;height:576px;margin-top:40px;"></div>
+        <div id="whiteboard-toolBar">
+            <div id="tool-tip" class="tool-tip" hidden=true>
+                <img src="./images/finish-btn.svg" class="tooltip-x" id="close-tool-tip-btn">
+                <img src="./images/toolTip_clear.png" class="tooltip-img">
+                <span class="tooltip-text">
+                    确定清空全部内容？
+                </span>
+                <div style="margin:0 auto;width:302px;">
+                    <div type="button" name="button" id="tooltip-confirm-btn" class="btn confirm-btn">确认</div>
+                    <div type="button" name="button" id="tooltip-cancel-btn" class="btn cancel-btn">取消</div>
+                </div>
+            </div>
+            <div style="margin:0 auto;width:700px;">
+                <div class='tool-bar'>
+                    <image src='./images/boardTool_pen.png' class='tool' id="Pen"></image>
+                    <image src='./images/boardTool_line.png' class='tool' id="Line"></image>
+                    <image src='./images/boardTool_rect.png' class='tool' id="Rect"></image>
+                    <image src='./images/boardTool_circle.png' class='tool' id="Circle"></image>
+                    <image src='./images/boardTool_image.png' class='tool' id="Image"></image>
+                    <image src='./images/boardTool_text.png' class='tool' id="IText"></image>
+                    <image src='./images/boardTool_undo.png' class='tool' id="Undo"></image>
+                    <image src='./images/boardTool_clear.png' class='tool' id="Clear"></image>
+                </div>
+                <div class="tool-style" id="tool-style">
+                    <div class="stroke-size-div" id="stroke-size-div">
+                        <image src='./images/boardTool_small-circle.png' class='stroke-width size-select-frame' id="stroke-width-0"></image>
+                        <image src='./images/boardTool_mid-circle.png' class='stroke-width' id="stroke-width-1"></image>
+                        <image src='./images/boardTool_big-circle.png' class='stroke-width' id="stroke-width-2"></image>
+                    </div>
+                    <div class="font-size-div" id="font-size-div" hidden="">
+                        <image src='./images/boardTool_small-A.png' class='stroke-width' id="font-size-0"></image>
+                        <image src='./images/boardTool_mid-A.png' class='stroke-width' id="font-size-1"></image>
+                        <image src='./images/boardTool_big-A.png' class='stroke-width' id="font-size-2"></image>
+                    </div>
+                    <div class='stroke-color' id="color-5" style="background-color: #0b0b0b;"></div>
+                    <div class='stroke-color' id="color-4" style="background-color: #cbcbcb;"></div>
+                    <div class='stroke-color' id="color-3" style="background-color: #1680fa;"></div>
+                    <div class='stroke-color' id="color-2" style="background-color: #51d76a;"></div>
+                    <div class='stroke-color' id="color-1" style="background-color: #fd9527;"></div>
+                    <div class='stroke-color color-select-frame' id="color-0" style="background-color: #fd3e39;"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="domain" value="<%= domain %>">
+    <input type="hidden" id="uptoken_url" value="<%= uptoken_url %>">
+    <script src='https://cdn.wilddog.com/sdk/js/v2/current/wilddog-board.js'></script>
+    <script src='https://cdn.wilddog.com/sdk/js/2.5.8/wilddog.js'></script>
+    <!-- <script src='https://cdn.staticfile.org/plupload/2.1.9/plupload.full.min.js'></script> -->
+    <script type="text/javascript" src="./plupload/js/moxie.js"></script>
+    <script type="text/javascript" src="./plupload/js/plupload.dev.js"></script>
+    <script type="text/javascript" src="./plupload/js/i18n/zh_CN.js"></script>
+    <!-- <script type="text/javascript" src="bower_components/plupload/js/plupload.full.min.js"></script> -->
+    <script src='./qiniu.js'></script>
+    <script src='./toolbar.js'></script>
+</body>
+
+</html>

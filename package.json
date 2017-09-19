@@ -1,0 +1,24 @@
+{
+  "name": "whiteboard-demo-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WildDogTeam/whiteboard-demo-web.git"
+  },
+  "author": "wilddog",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WildDogTeam/whiteboard-demo-web/issues"
+  },
+  "homepage": "https://github.com/WildDogTeam/whiteboard-demo-web#readme",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "qiniu": "^7.0.8"
+  }
+}
